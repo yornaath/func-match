@@ -20,6 +20,15 @@ describe('func-match', function() {
 
   })
 
+  it('should work with several values', function() {
+
+    var matcher = match( [1,2,3], '123',
+                         [4,5,6], '456' )
+
+    assert.equal( matcher(1,2,3), '123' )
+    assert.equal( matcher(4,5,6), '456' )
+
+  })
 
   it('should lazily invoke and return the returned value if the match is a function', function() {
 
