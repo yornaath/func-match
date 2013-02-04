@@ -24,12 +24,12 @@ concat( 'foo', 13 )
 
 ```javascript
 var foo = match([String, __], 'string *',
-                [__, String], '* number')
+                [__, Number], '* number')
 
-foo('bar', 19)
+foo('bar', {})
 // -> 'string *'
 
-foo(false, 'bar')
-// -> '* string'
+foo(false, 42)
+// -> '* number'
 
 ```
