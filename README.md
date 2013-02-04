@@ -23,6 +23,8 @@ concat( 'foo', 13 )
 #### wildcard
 
 ```javascript
+var __ = match.__
+
 var foo = match([String, __], 'string *',
                 [__, Number], '* number')
 
