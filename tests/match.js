@@ -61,5 +61,26 @@ describe('func-match', function() {
 
   })
 
+
+
+  describe('wildcard', function() {
+
+    var __ = match.__
+
+    it('should match on any using the match.__', function() {
+
+      var foo = match([String, __],         'string*',
+                      [__, String],         '*string',
+                      [Number, __, String], 'number*string')
+
+      assert.equal( foo('lol', true), 'string*' )
+      assert.equal( foo(false, 'lol'), '*string' )
+      assert.equal( foo(42, {}, 'lol'), 'number*string' )
+
+    })
+
+  })
+
+
 })
 

@@ -1,4 +1,5 @@
 
+var __ = {}
 
 function match( form ) {
   var form
@@ -37,6 +38,7 @@ function isMatch( pattern, args ) {
     match = pattern[ i ]
     cand = args[ i ]
 
+    if( match === __ ) matches++
     if( match == Number && typeof cand == 'number' ) matches++
     if( match == String && typeof cand == 'string' ) matches++
     if( typeof match == 'function' && cand instanceof match ) matches++
@@ -72,3 +74,4 @@ function toArray( args ) {
 }
 
 module.exports = match
+module.exports.__ = __
