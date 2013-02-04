@@ -21,6 +21,7 @@ concat( 'foo', 13 )
 ```
 
 #### wildcard
+
 ```javascript
 var foo = match([String, __],         'string *',
                 [__, String],         '* number')
