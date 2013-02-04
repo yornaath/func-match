@@ -1,0 +1,23 @@
+{
+  "name": "func-prop",
+  "version": "0.0.1",
+  "description": "Functional helper for getting a prop on an object, sync and async",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "async",
+    "async.js",
+    "functional",
+    "property",
+    "getter",
+    "helper"
+  ],
+  "author": "Jørn Andre Tangen[@gorillatron]",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.8.1",
+    "async": "~0.1.22"
+  }
+}
