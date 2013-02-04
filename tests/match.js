@@ -63,10 +63,3 @@ describe('func-match', function() {
 
 })
 
-
-var concat = match([String, String], function( a, b ){
-                     return a + b
-                   },
-                   [String, Number], function( a, b ) {
-                     return a + ':' + 'b'
-                   })

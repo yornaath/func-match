@@ -9,7 +9,7 @@ var concat = match([String, String], function( a, b ){
                      return a + b
                    },
                    [String, Number], function( a, b ) {
-                     return a + '::' + 'b'
+                     return a + '::' + b
                    })
 
 concat( 'foo', 'bar' )
