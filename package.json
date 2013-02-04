@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha tests"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gorillatron/func-prop.git"
+  },
   "keywords": [
     "async",
     "async.js",
