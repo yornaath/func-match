@@ -1,32 +1,21 @@
 
-### prop
+### match
 
 ```javascript
 
-var prop = require( 'func-prop' )
+var match = require( 'func-match' )
 
-var fighters = [
-  {name: 'Evander'},
-  {name: 'Muhammed'},
-  {name: 'Mike'}
-]
+var concat = match([String, String], function( a, b ){
+                     return a + b
+                   },
+                   [String, Number], function( a, b ) {
+                     return a + '::' + 'b'
+                   })
 
-fighters.map( prop('name') ) 
-//-> ['Evander', 'Muhammed', 'Mike']
+concat( 'foo', 'bar' )
+// -> 'foobar'
 
-```
+concat( 'foo', 13 )
+// -> 'foo::13
 
-### invoke.backbone
-
-Allso works with backbone style model objects that has the method get
-
-```javascript
-
-var prop = require( 'func-prop' ).backbone
-
-var fighters = new FightersCollection()
-figthers.reset( fighters )
-
-fighters.map( prop('name') )
-//-> ['Evander', 'Muhammed', 'Mike']
 ```
