@@ -1,22 +1,20 @@
 {
-  "name": "func-prop",
+  "name": "func-match",
   "version": "0.0.1",
-  "description": "Functional helper for getting a prop on an object, sync and async",
+  "description": "Functional pettern matching",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:gorillatron/func-prop.git"
+    "url": "git@github.com:gorillatron/func-match.git"
   },
   "keywords": [
-    "async",
-    "async.js",
     "functional",
-    "property",
-    "getter",
-    "helper"
+    "pattern matching",
+    "pattern",
+    "matching"
   ],
   "author": "Jørn Andre Tangen[@gorillatron]",
   "license": "MIT",
