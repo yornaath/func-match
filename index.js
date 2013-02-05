@@ -39,10 +39,10 @@ function isMatch( pattern, args ) {
     cand = args[ i ]
 
     if( match === __ ) matches++
-    if( match == Number && typeof cand == 'number' ) matches++
-    if( match == String && typeof cand == 'string' ) matches++
-    if( typeof match == 'function' && cand instanceof match ) matches++
-    if( match === cand ) matches++
+    else if( match == Number && typeof cand == 'number' ) matches++
+    else if( match == String && typeof cand == 'string' ) matches++
+    else if( typeof match == 'function' && cand instanceof match ) matches++
+    else if( match === cand ) matches++
 
   }
 
