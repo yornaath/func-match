@@ -1,6 +1,6 @@
 {
-  "name": "func-match",
-  "version": "0.0.1",
+  "name": "funcmatch",
+  "version": "0.0.2",
   "description": "Functional pettern matching",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
-  "name": "match",
-  "version": "0.0.1",
+  "name": "funcmatch",
+  "version": "0.0.2",
   "description": "Pattern matching",
   "keywords": ["pattern matching", "typed functions", "typed", "pattern", "matching"],
   "scripts": ["index.js"],
