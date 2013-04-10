@@ -1,18 +1,18 @@
-# match
+# funcmatch
 
 Pattern matching. Create typed functions.
 
 ## Installation
 
 ```
-$ component install gorillatron/match
+$ component install gorillatron/funcmatch
 ```
 
 ## Usage
 
 ```javascript
 
-var match = require( 'func-match' )
+var match = require( 'funcmatch' )
 
 var concat = match([String, String], function( a, b ){
                      return a + b
