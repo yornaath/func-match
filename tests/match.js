@@ -61,7 +61,27 @@ describe('func-match', function() {
 
   })
 
+  it('should work with user types', function() {
 
+    function MyType() {}
+
+    var takesMyType = match([MyType, String], function( myType, string ) {
+                              return 1
+                            },
+                            [MyType], function() {
+                              return 2
+                            },
+                            [String], function() {
+                              return 3
+                            })
+
+    var myType = new MyType
+
+    assert.equal( takesMyType(myType, "lol"), 1 )
+    assert.equal( takesMyType(myType), 2 )
+    assert.equal( takesMyType("lol"), 3 )
+
+  })
 
   describe('wildcard', function() {
 
