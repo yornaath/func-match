@@ -1,5 +1,14 @@
+# match
 
-### match
+Pattern matching. Create typed functions.
+
+## Installation
+
+```
+$ component install gorillatron/match
+```
+
+## Usage
 
 ```javascript
 
@@ -20,7 +29,7 @@ concat( 'foo', 13 )
 
 ```
 
-#### wildcard
+### wildcard
 
 ```javascript
 var __ = match.__
@@ -35,3 +44,7 @@ foo(false, 42)
 // -> '* number'
 
 ```
+
+## License 
+
+MIT licensed
