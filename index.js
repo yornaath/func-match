@@ -73,5 +73,5 @@ function toArray( args ) {
   return Array.prototype.slice.call( args, 0 )
 }
 
-module.exports = match
-module.exports.__ = __
+module.exports = match;
+module.exports.__ = __;

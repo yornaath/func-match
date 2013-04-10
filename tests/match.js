@@ -49,12 +49,12 @@ describe('func-match', function() {
 
   it('should invoke the matching function with the parameters passed', function() {
 
-    var concat = match([String, String], function( a, b ) { 
-                         return a + b 
-                       },
-                       [String, Number], function( s, n ) { 
-                         return s + ':' + n 
-                       })
+    var concat = match( [String, String], function( a, b ) { 
+                          return a + b 
+                        },
+                        [String, Number], function( s, n ) { 
+                          return s + ':' + n 
+                        })
 
     assert.equal( concat('foo', 'bar'), 'foobar' )
     assert.equal( concat('foo', 12), 'foo:12' )
@@ -69,9 +69,9 @@ describe('func-match', function() {
 
     it('should match on any using the match.__', function() {
 
-      var foo = match([String, __],         'string*',
-                      [__, String],         '*string',
-                      [Number, __, String], 'number*string')
+      var foo = match( [String, __],         'string*',
+                       [__, String],         '*string',
+                       [Number, __, String], 'number*string')
 
       assert.equal( foo('lol', true), 'string*' )
       assert.equal( foo(false, 'lol'), '*string' )
