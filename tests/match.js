@@ -30,6 +30,16 @@ describe('func-match', function() {
 
   })
 
+  it('should work with dates', function() {
+
+    var matcher = match( [Number, Date], 'ND',
+                         [Date, Number], 'DN' )
+
+    assert.equal( matcher(1, new Date()), 'ND' )
+    assert.equal( matcher(new Date(), 12), 'DN' )
+
+  })
+
   it('should lazily invoke and return the returned value if the match is a function', function() {
 
     var lazy = match( [String], function( string ) { return "string" } )
