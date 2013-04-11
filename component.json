@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Pattern matching",
   "keywords": ["pattern matching", "typed functions", "typed", "pattern", "matching"],
+  "main": "index.js",
   "scripts": ["index.js"],
   "license": "MIT"
 }
