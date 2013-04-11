@@ -1,6 +1,21 @@
 
+
+/**
+ * Wildcard
+ *
+ * @api public
+ */
 var __ = {}
 
+
+/**
+ * Pattern matcher
+ *
+ * @api public
+ *
+ * @param {Array<Array>} form
+ * @return {*}
+ */
 function match( form ) {
   var form
   
@@ -28,7 +43,15 @@ function match( form ) {
   }
 }
 
-
+/**
+ * Matches a pattern against arguments
+ *
+ * @api private
+ *
+ * @param {Array} pattern
+ * @param {Array} args
+ * @return {Boolean}
+ */
 function isMatch( pattern, args ) {
   var i, match, cand, matches
 
@@ -51,10 +74,28 @@ function isMatch( pattern, args ) {
 }
 
 
+/**
+ * Checks if a candidate value is instance of match
+ *
+ * @api private
+ *
+ * @param {*} cand
+ * @param {*} match
+ * @return {Boolean}
+ */
 function isInstanceOf( cand, match ) {
   return cand instanceof match
 }
 
+
+/**
+ * Creates an array containing tupples of pattern and fn
+ *
+ * @api private
+ *
+ * @param {Array} array
+ * @return {Array<Array>}
+ */
 function createForm( array ) {
   var form, i, item, seq
 
@@ -74,9 +115,18 @@ function createForm( array ) {
 }
 
 
+/**
+ * Creates a new array from Arguments
+ *
+ * @api private
+ *
+ * @param {Arguments} args
+ * @return {Array}
+ */
 function toArray( args ) {
   return Array.prototype.slice.call( args, 0 )
 }
+
 
 module.exports = match;
 module.exports.__ = __;
