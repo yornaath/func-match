@@ -35,13 +35,14 @@ function isMatch( pattern, args ) {
   matches = 0
 
   for( i = 0; i < pattern.length; i++ ) {
+
     match = pattern[ i ]
     cand = args[ i ]
 
     if( match === __ ) matches++
     else if( match == Number && typeof cand == 'number' ) matches++
     else if( match == String && typeof cand == 'string' ) matches++
-    else if( typeof match == 'function' && cand instanceof match ) matches++
+    else if( typeof match == 'function' && isInstanceOf(cand, match) ) matches++
     else if( match === cand ) matches++
 
   }
@@ -49,6 +50,10 @@ function isMatch( pattern, args ) {
   return matches === pattern.length
 }
 
+
+function isInstanceOf( cand, match ) {
+  return cand instanceof match
+}
 
 function createForm( array ) {
   var form, i, item, seq
